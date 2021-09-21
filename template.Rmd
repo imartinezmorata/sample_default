@@ -1,0 +1,51 @@
+---
+title: "Simple document"
+author: Irene
+date: 2021
+output: html_document
+toc: TRUE
+toc_float: TRUE
+---
+
+I'm an R Markdown document! 
+
+# Section 1
+
+Here's a **code chunk** that samples from 
+a _normal distribution_:
+
+```{r}
+setwd("~/Desktop/DATA SCIENCE")
+samp = rnorm(100)
+length(samp)
+```
+
+# Section 2
+
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
+
+# Section 3
+
+Lets write a new code chunk
+
+```{r new_code_chunk}
+library(tidyverse)
+
+set.seed(12)
+
+learning_df = 
+  tibble(
+    sample =rnorm(500, mean =1),
+    gr_than_0 = sample > 0,
+    abs_val = abs(sample))
+
+ggplot(learning_df, aes(x= abs_val)) + geom_histogram(binwidth = 1)
+
+
+```
+
+
+
+```
+
