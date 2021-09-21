@@ -2,7 +2,7 @@
 title: "Simple document"
 author: Irene
 date: 2021
-output: html_document
+output: github_document
 toc: TRUE
 toc_float: TRUE
 ---
